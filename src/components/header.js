@@ -1,48 +1,21 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import styled from "styled-components"
 
-// const StyledLink = styled(Link)`
-// 	color: White;
-// 	text-decoration: none;
-// 	margin: 1rem;
-// `;
-
-// .navlink {
-// 	color: White;
-// 	text-decoration: none;
-// 	margin: `1rem`
-// }
+const StyledLink = styled(Link)`
+	color: White;
+	text-decoration: none;
+	margin: 1rem;
+`;
 
 const Header = ({ siteTitle }) => (
-	<header
-		style={{ background: `rebeccapurple`, marginBottom: `1.45rem` }}
-	>
-		<div
-			class="topnav"
-			style={{ padding: `1.45rem 1.0875rem` }} // margin: `0 auto`, maxWidth: 960,
-		>
+	<header style={{ background: `rebeccapurple`, marginBottom: `1.45rem` }}>
+		<div style={{ padding: `1.45rem 1.0875rem` }}>
 			<h1 style={{ margin: 0 }}>
-				<Link
-					to="/"
-					style={{ margin: `1rem`, color: `white`, textDecoration: `none`}}
-				>
-					{siteTitle}
-				</Link>
-				
-				<Link
-					to="/page-2/"
-					style={{ margin: `1rem`, color: `white`, textDecoration: `none`}}
-				>
-					Page 2
-				</Link>
-				
-				<Link
-					to="/using-typescript/"
-					style={{ margin: `1rem`, color: `white`, textDecoration: `none`}}
-				>
-					Using Typescript
-				</Link>
+				<StyledLink to="/" >{siteTitle}</StyledLink>
+				<StyledLink to="/page-2/">Page 2</StyledLink>
+				<StyledLink to="/using-typescript/">Using Typescript</StyledLink>
 			</h1>
 		</div>
 	</header>
